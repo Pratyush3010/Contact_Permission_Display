@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ProgressBar
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_centerHorizontal="true"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_height="wrap_content"
+        android:id="@+id/progress"
+        android:progressDrawable="@drawable/custom_progress_bar"/>
+
+   <Button
+       android:layout_below="@id/progress"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/btnread"
+       android:textColor="@color/white"
+       android:text="Read Contact"
+       android:layout_centerHorizontal="true"
+       android:layout_marginTop="10dp"
+       android:backgroundTint="@color/teal_700"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/RcvContact"
+        tools:listitem="@layout/contact_list"
+        android:layout_below="@id/btnread"
+        android:layout_marginLeft="10dp"/>
+
+</RelativeLayout>
